@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { Icon } from 'astro-icon/components';
 ---
 
 <!doctype html>
@@ -16,8 +17,18 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<header class="bg-stone-500 h-16 flex items-center">
-		este es mi header
+	<header class= "container max-w-xl mx-auto bg-white-340 h-16 flex items-center" >
+		<div class=" flex space-x-6">
+			<img class="h-6" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="">
+			<div class="w-[2px] h-6 bg-slate-800"></div>
+			<img class="h-6" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW4ESm?ver=c63e" alt="">
+		</div>
+		<menu>	
+			<a href="#" class="hover:underline underline-offset-8 decoration-2">
+				Game Pass
+			</a><Icon name="mdi:account" />
+		</menu>
+		
 	</header>
 	<body>
 		<slot />
